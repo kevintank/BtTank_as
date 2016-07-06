@@ -43,6 +43,8 @@ import android.widget.Toast;
  * This is the main Activity that displays the current chat session.
  * 한글로 수정
  *
+ * UI 수정및 필요 없는 부분 개선이 필요한다.
+ *
  */
 public class BluetoothChat extends Activity {
     // Debugging
