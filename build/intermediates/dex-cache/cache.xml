@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\bike_svn\Btank\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="D:\bike_svn\Btank\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.0.0_d92de4432bddee0085495abb538fc7b7f73904de\classes.dex" />
+    </item>
+    <item
+        jar="D:\bike_svn\Btank\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="D:\bike_svn\Btank\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.0.0_ab7e36b0608225a8b43c3f56aad56009753bc1c8\classes.dex" />
+    </item>
+    <item
+        jar="D:\bike_svn\Btank\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="93a74d0efcaba9d240606c1081ef77db36f7ba3d">
+        <dex dex="D:\bike_svn\Btank\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e7b6050783bb8386a0b7b59c77ae78b0761b7219\classes.dex" />
+    </item>
+    <item
+        jar="D:\Android\l\extras\android\m2repository\com\android\support\support-annotations\24.0.0\support-annotations-24.0.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="D:\bike_svn\Btank\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.0.0_0ddb00643db835c094deddaa98c55540424e7984\classes.dex" />
+    </item>
+    <item
+        jar="D:\bike_svn\Btank\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="D:\bike_svn\Btank\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.0.0_da6f0ad93cee93aef174b8b2b67007c9316ccef9\classes.dex" />
+    </item>
+    <item
+        jar="D:\bike_svn\Btank\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.0.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="D:\bike_svn\Btank\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.0.0_64b5b5d724ad19a3ef259ab1702128aa9cc5c4c5\classes.dex" />
+    </item>
+    <item
+        jar="D:\bike_svn\Btank\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="505c1433b046af4c405a3dd1ec879dca41712f55">
+        <dex dex="D:\bike_svn\Btank\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_4066fbf37c85ab659d0228662506546c62d407b4\classes.dex" />
+    </item>
+    <item
+        jar="D:\bike_svn\Btank\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0\jars\libs\internal_impl-24.0.0.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="D:\bike_svn\Btank\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.0.0_a6a8f3539a635534098652ad6b4c1cbed54790dd\classes.dex" />
+    </item>
+
+</items>
