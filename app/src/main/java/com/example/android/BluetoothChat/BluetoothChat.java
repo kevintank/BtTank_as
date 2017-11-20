@@ -120,7 +120,7 @@ public class BluetoothChat extends Activity {
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
         // If the adapter is null, then Bluetooth is not supported
-     
+
         if (mBluetoothAdapter == null) {
             Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
             finish();
@@ -136,6 +136,9 @@ public class BluetoothChat extends Activity {
 
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
+        //블루투스가 꺼져 있다면 "이 기기에서 블루투스를 사요 설정 하려 합니다" 팝업창 표시되며
+        //허용 버튼을 누르면 블루투스가 켜진다
+        //다시 액티비티가 활성화 되면서 onActivityResult 메소드의 setupChat() 부분이 실행된다.
         if (!mBluetoothAdapter.isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
@@ -150,7 +153,17 @@ public class BluetoothChat extends Activity {
         super.onResume();
         if(D) Log.e(TAG, "+ ON RESUME +");
 
-        permission();
+       // permission();
+
+        if (mChatService != null) {
+            // Only if the state is STATE_NONE, do we know that we haven't started already
+
+            if (mChatService.getState() == BluetoothChatService.STATE_NONE) {
+                // Start the Bluetooth chat services
+
+                mChatService.start();
+            }
+        }
 
 
     }
@@ -326,6 +339,7 @@ public class BluetoothChat extends Activity {
     };
 
     // The Handler that gets information back from the BluetoothChatService
+    // 서비스에서 연결 상태에 대한 정보를 표시한다.
     private final Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -373,12 +387,13 @@ public class BluetoothChat extends Activity {
         }
     };
 
-    //
+    //블루 투스 허용하면 이쪽을 결과가 넘어 온다.
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(D) Log.d(TAG, "onActivityResult " + resultCode);
         switch (requestCode) {
         case REQUEST_CONNECT_DEVICE_SECURE:
             // When DeviceListActivity returns with a device to connect
+            //디바이스 리스트에서 돌아 올때
             if (resultCode == Activity.RESULT_OK) {
                 connectDevice(data, true); //??? ?????? 
             }
@@ -390,13 +405,13 @@ public class BluetoothChat extends Activity {
                 connectDevice(data, false);
             }
             break;
-        case REQUEST_ENABLE_BT:
+        case REQUEST_ENABLE_BT:   //블루투스 허용일때
             // When the request to enable Bluetooth returns
             if (resultCode == Activity.RESULT_OK) {
                 // Bluetooth is now enabled, so set up a chat session
             	Log.d("DEBUG","-------------??????? ??????");
-            	setupChat();
-            } else {
+            	setupChat();   //UI초기화
+            } else {      //허용 하지 않을때 메시지
                 // User did not enable Bluetooth or an error occured
                 Log.d(TAG, "BT not enabled");
                 Toast.makeText(this, R.string.bt_not_enabled_leaving, Toast.LENGTH_SHORT).show();

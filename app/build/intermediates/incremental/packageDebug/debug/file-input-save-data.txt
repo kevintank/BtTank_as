@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Nov 20 10:45:47 KST 2017
+#Mon Nov 20 11:26:38 KST 2017
 175.set=ANDROID_RESOURCE
 122.file=D\:\\work\\BtTank_as\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png
 60.set=ANDROID_RESOURCE
