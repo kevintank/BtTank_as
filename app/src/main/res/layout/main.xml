@@ -131,7 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/button_up"
             android:text="@string/left"/>
-      
+
 
     </RelativeLayout>
 
@@ -142,7 +142,7 @@
         android:transcriptMode="alwaysScroll"
         android:layout_weight="1"
     />
-    <LinearLayout
+<!--    <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -159,6 +159,6 @@
             android:layout_height="wrap_content"
             android:text="@string/send"
         />
-    </LinearLayout>
+    </LinearLayout>-->
 
 </LinearLayout>

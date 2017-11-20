@@ -16,13 +16,17 @@
 
 package com.example.android.BluetoothChat;
 
+import android.Manifest;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -146,13 +150,9 @@ public class BluetoothChat extends Activity {
         super.onResume();
         if(D) Log.e(TAG, "+ ON RESUME +");
 
-        if (mChatService != null) {
-            // Only if the state is STATE_NONE, do we know that we haven't started already
-        	if (mChatService.getState() == BluetoothChatService.STATE_NONE) {
-              // Start the Bluetooth chat services
-        		mChatService.start();
-            }
-        }
+        permission();
+
+
     }
 
     private void setupChat() {
@@ -165,19 +165,19 @@ public class BluetoothChat extends Activity {
         mConversationView.setAdapter(mConversationArrayAdapter);
 
         // Initialize the compose field with a listener for the return key
-        mOutEditText = (EditText) findViewById(R.id.edit_text_out);
+        //mOutEditText = (EditText) findViewById(R.id.edit_text_out);
         //EditText????? ?????? ??? 
-        mOutEditText.setOnEditorActionListener(mWriteListener);
+       // mOutEditText.setOnEditorActionListener(mWriteListener);
 
         // Initialize the send button with a listener that for click events
-            mSendButton = (Button) findViewById(R.id.button_send);
+          //  mSendButton = (Button) findViewById(R.id.button_send);
           mSendUpButton = (Button) findViewById(R.id.button_up);
         mSendDownButton = (Button) findViewById(R.id.button_down);
         mSendLeftButton = (Button) findViewById(R.id.button_left);
        mSendRightButton = (Button) findViewById(R.id.button_right);
         mSendStopButton = (Button) findViewById(R.id.button_stop);
         
-        mSendButton.setOnClickListener(new OnClickListener() {
+    /*    mSendButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // Send a message using content of the edit text widget
             	TextView view = (TextView) findViewById(R.id.edit_text_out);
@@ -186,7 +186,7 @@ public class BluetoothChat extends Activity {
             }
             
             
-        });
+        });*/
       
         //??
         mSendUpButton.setOnClickListener(new OnClickListener(){
@@ -446,4 +446,117 @@ public class BluetoothChat extends Activity {
         return false;
     }
 
+    /**
+     * 퍼미션
+     */
+
+    private static final int QSC_PERMISSIONS_CAPTURE = 101;
+
+    private void permission()
+    {
+        int currentAPIVersion = android.os.Build.VERSION.SDK_INT;
+        int cameraPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
+        int writePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int readPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        int coarsePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
+        int bluetoothPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH);
+        int bluetoothAdimePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN);
+
+        if (currentAPIVersion >= android.os.Build.VERSION_CODES.M
+                && (cameraPermissionCheck == PackageManager.PERMISSION_DENIED
+                || writePermissionCheck == PackageManager.PERMISSION_DENIED
+                || readPermissionCheck == PackageManager.PERMISSION_DENIED
+                || coarsePermissionCheck == PackageManager.PERMISSION_DENIED
+                || bluetoothPermissionCheck == PackageManager.PERMISSION_DENIED
+                || bluetoothAdimePermissionCheck == PackageManager.PERMISSION_DENIED)) {
+            int per = QSC_PERMISSIONS_CAPTURE;
+            askPermission(per);
+            return;
+        }
+
+        CheckPhoneState();
+    }
+
+    private void CheckPhoneState(){
+
+        if (mChatService != null) {
+            // Only if the state is STATE_NONE, do we know that we haven't started already
+            if (mChatService.getState() == BluetoothChatService.STATE_NONE) {
+                // Start the Bluetooth chat services
+                mChatService.start();
+            }
+        }
+
+    }
+
+    private void askPermission(int permissionCode) {
+        int currentAPIVersion = android.os.Build.VERSION.SDK_INT;
+        int cameraPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
+        int writePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int readPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        int coarsePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
+        int bluetoothPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH);
+        int bluetoothAdimePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN);
+
+        if (currentAPIVersion >= android.os.Build.VERSION_CODES.M) {
+            int denyNum = 0, index = 0;
+
+            if (cameraPermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+            if (writePermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+            if (readPermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+            if (coarsePermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+            if (bluetoothPermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+            if (bluetoothAdimePermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+
+            String permission[] = new String[denyNum];
+
+            if (cameraPermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.CAMERA;
+                index++;
+            }
+            if (writePermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+                index++;
+            }
+            if (readPermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.READ_EXTERNAL_STORAGE;
+                index++;
+            }
+
+            if (coarsePermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.ACCESS_COARSE_LOCATION;
+                index++;
+            }
+
+            if (bluetoothPermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.ACCESS_COARSE_LOCATION;
+                index++;
+            }
+
+            if (bluetoothAdimePermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.ACCESS_COARSE_LOCATION;
+                index++;
+            }
+
+
+            if (denyNum > 0)
+                ActivityCompat.requestPermissions(this, permission, permissionCode);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            switch (requestCode) {
+                case QSC_PERMISSIONS_CAPTURE:
+                    break;
+            }
+        }
+    }
 }
