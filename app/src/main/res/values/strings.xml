@@ -15,7 +15,7 @@
 -->
 
 <resources>
-    <string name="app_name">Bt Tank</string>
+    <string name="app_name">Bluetooth Tank</string>
 
     <!--  BluetoothChat -->
     <string name="send">Send</string>

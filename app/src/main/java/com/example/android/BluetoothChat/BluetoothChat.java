@@ -27,6 +27,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -50,7 +51,7 @@ import android.widget.Toast;
  * UI 수정및 필요 없는 부분 개선이 필요한다.
  *
  */
-public class BluetoothChat extends Activity {
+public class BluetoothChat extends AppCompatActivity {
     // Debugging
     private static final String TAG = "BluetoothChat";
     private static final boolean D = true;
@@ -111,9 +112,9 @@ public class BluetoothChat extends Activity {
         //getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.custom_title);
 
         // Set up the custom title
-        mTitle = (TextView) findViewById(R.id.title_left_text);
-        mTitle.setText(R.string.app_name); 
-        mTitle = (TextView) findViewById(R.id.title_right_text);
+        //mTitle = (TextView) findViewById(R.id.title_left_text);
+        //mTitle.setText(R.string.app_name);
+        mTitle = (TextView) findViewById(R.id.title_right_text);  //연결 상태
 
         // Get local Bluetooth adapter
    
@@ -160,7 +161,7 @@ public class BluetoothChat extends Activity {
 
             if (mChatService.getState() == BluetoothChatService.STATE_NONE) {
                 // Start the Bluetooth chat services
-
+                if (D) Log.d(TAG, "블루투스 서비스 시작");
                 mChatService.start();
             }
         }
@@ -169,7 +170,8 @@ public class BluetoothChat extends Activity {
     }
 
     private void setupChat() {
-        Log.d(TAG, "setupChat()");
+
+        Log.d(TAG, "setupChat() UI 초기화");
 
         // Initialize the array adapter for the conversation thread
         mConversationArrayAdapter = new ArrayAdapter<String>(this, R.layout.message);
@@ -201,7 +203,7 @@ public class BluetoothChat extends Activity {
             
         });*/
       
-        //??
+        //전진
         mSendUpButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
@@ -210,7 +212,8 @@ public class BluetoothChat extends Activity {
         	 sendToque(255,255);
         	}
         });
-        
+
+        //후진
         mSendDownButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
@@ -219,7 +222,8 @@ public class BluetoothChat extends Activity {
         	 sendToque(-255, -255);
         	}
         });
-        
+
+        //우회전
         mSendLeftButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
@@ -229,7 +233,7 @@ public class BluetoothChat extends Activity {
         	}
         });
         
-        //????? ??
+        //좌회전
         mSendRightButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
@@ -239,7 +243,7 @@ public class BluetoothChat extends Activity {
         	}
         });
         
-        //??
+        //정지
         mSendStopButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
@@ -292,9 +296,7 @@ public class BluetoothChat extends Activity {
     private void sendToque(int left, int right){
     	
     	if (mChatService.getState() != BluetoothChatService.STATE_CONNECTED) {
-             
         	Toast.makeText(this, R.string.not_connected, Toast.LENGTH_SHORT).show();
-           
         	return;
         }
 
@@ -347,21 +349,21 @@ public class BluetoothChat extends Activity {
             case MESSAGE_STATE_CHANGE:
                 if(D) Log.i(TAG, "MESSAGE_STATE_CHANGE: " + msg.arg1);
                 switch (msg.arg1) {
-                case BluetoothChatService.STATE_CONNECTED: //???????
+                case BluetoothChatService.STATE_CONNECTED: //블루투스 연결
                     mTitle.setText(R.string.title_connected_to);
                     mTitle.append(mConnectedDeviceName);
                     mConversationArrayAdapter.clear();
                     break;
-                case BluetoothChatService.STATE_CONNECTING:
+                case BluetoothChatService.STATE_CONNECTING:  //연결중
                     mTitle.setText(R.string.title_connecting);
                     break;
                 case BluetoothChatService.STATE_LISTEN:
-                case BluetoothChatService.STATE_NONE:
+                case BluetoothChatService.STATE_NONE:   //연결해제
                     mTitle.setText(R.string.title_not_connected);
                     break;
                 }
                 break;
-            case MESSAGE_WRITE: //????? ?????? ???? 
+            case MESSAGE_WRITE:
                 byte[] writeBuf = (byte[]) msg.obj;
                 // construct a string from the buffer
                 String writeMessage = new String(writeBuf);
@@ -393,14 +395,15 @@ public class BluetoothChat extends Activity {
         switch (requestCode) {
         case REQUEST_CONNECT_DEVICE_SECURE:
             // When DeviceListActivity returns with a device to connect
-            //디바이스 리스트에서 돌아 올때
+            //인증 암호화된 연결
             if (resultCode == Activity.RESULT_OK) {
-                connectDevice(data, true); //??? ?????? 
+                connectDevice(data, true);
             }
             break;
         case REQUEST_CONNECT_DEVICE_INSECURE:
         	
-            // When DeviceListActivity returns with a device to connect
+           //Insecure(인증, 암호화되지 있지 않은) 연결을 지원하기 위한 API가 추가되었다. 기존 메서드에 'Insecure'가 덧붙여진 형태이다.
+            // 페이링에 암호키 확인을 하지 않은 디바이스 등은 이 API를 이용하여 통신해야 한다
             if (resultCode == Activity.RESULT_OK) {
                 connectDevice(data, false);
             }
@@ -409,7 +412,7 @@ public class BluetoothChat extends Activity {
             // When the request to enable Bluetooth returns
             if (resultCode == Activity.RESULT_OK) {
                 // Bluetooth is now enabled, so set up a chat session
-            	Log.d("DEBUG","-------------??????? ??????");
+            	Log.d("DEBUG","블루투스 허용");
             	setupChat();   //UI초기화
             } else {      //허용 하지 않을때 메시지
                 // User did not enable Bluetooth or an error occured
@@ -438,7 +441,7 @@ public class BluetoothChat extends Activity {
         return true;
     }
 
-    //?? ??
+    //옵션메뉴
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent serverIntent = null;
