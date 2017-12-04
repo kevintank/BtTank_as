@@ -1,0 +1,4 @@
+#Sat Nov 18 09:36:58 KST 2017
+base.0=F\:\\BT_tank_project\\BtTank_as\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8
+renamed.0=classes.dex
+file.0=F\:\\BT_tank_project\\BtTank_as\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\8\\classes.dex
