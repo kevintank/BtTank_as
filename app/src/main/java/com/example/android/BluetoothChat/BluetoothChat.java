@@ -22,10 +22,7 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-<<<<<<< HEAD
-import android.os.Build;
-=======
->>>>>>> d7fd4ab0d7f75fb04c3540b3c32895d52c65e89e
+
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
