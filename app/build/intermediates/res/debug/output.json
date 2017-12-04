@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"outputType":{"type":"PROCESSED_RES"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"path":"resources-debug.ap_","properties":{"packageId":"com.example.android.BluetoothChat","split":"","minSdkVersion":"23"}}]
+=======
+[{"outputType":{"type":"PROCESSED_RES"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"path":"resources-debug.ap_","properties":{"packageId":"com.example.android.BluetoothChat","split":"","minSdkVersion":"19"}}]
+>>>>>>> d7fd4ab0d7f75fb04c3540b3c32895d52c65e89e

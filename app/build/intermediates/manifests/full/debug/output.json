@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"outputType":{"type":"MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"path":"AndroidManifest.xml","properties":{"packageId":"com.example.android.BluetoothChat","split":"","minSdkVersion":"23"}}]
+=======
+[{"outputType":{"type":"MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":1},"path":"AndroidManifest.xml","properties":{"packageId":"com.example.android.BluetoothChat","split":"","minSdkVersion":"19"}}]
+>>>>>>> d7fd4ab0d7f75fb04c3540b3c32895d52c65e89e

@@ -15,14 +15,29 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
 
+<<<<<<< HEAD
           /*  applicationVariants.all { variant ->
+=======
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    outputFileName = "BtTank." + "${variant.name}-${variant.versionName}.apk"
+                }
+
+
+           /* applicationVariants.all { variant ->
+>>>>>>> d7fd4ab0d7f75fb04c3540b3c32895d52c65e89e
                 variant.outputs.each {
                     output ->
                         def file = output.outputFile
                         output.outputFile = new File(file.parent,
                                 file.name.replace("app", "BtTank" + defaultConfig.versionName))
+<<<<<<< HEAD
                 }
             }*/
+=======
+                }*/
+            }
+>>>>>>> d7fd4ab0d7f75fb04c3540b3c32895d52c65e89e
 
         }
     }

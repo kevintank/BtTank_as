@@ -488,8 +488,9 @@ public class BluetoothChatService {
         public void toque(int left, int right){
         	
         	try{
-        		String data = "#M";
-        		
+        		String data = "#M";  //명령 구분
+
+                //왼쪽 모터
         		if(0 < left){
         			  data += 'F';
         		}else if(0 > left){      // 
@@ -498,7 +499,8 @@ public class BluetoothChatService {
         		}else{
         			data += 'H';
         		}
-        		
+
+        		//오른쪽 모터
         		if(0 < right){
         			data += 'F';
         		}else if(0 > right){
@@ -511,10 +513,10 @@ public class BluetoothChatService {
         		//if(left !=0) data+=  (char)(left&0xff); 
         		//if(right != 0) data +=  (char)(right&0xff);  
         		mmOutStream.write(data.getBytes());
-   
 
         		byte[] size = new byte[2];
 
+        		//왼쪽 전달
         		if(left !=0){
 
         			size[0] = (byte) ((left >> 8) & 0x00ff);
@@ -529,7 +531,8 @@ public class BluetoothChatService {
 
         		size[0] = 0;
         		size[1] = 0;
-        		
+
+        		//오른쪽 전달
         		if(right != 0){
         			 
         			size[0] = (byte) ((right >> 8) & 0x00ff);
@@ -557,8 +560,7 @@ public class BluetoothChatService {
                 mmOutStream.write(buffer);
 
                 // Share the sent message back to the UI Activity
-                mHandler.obtainMessage(BluetoothChat.MESSAGE_WRITE, -1, -1, buffer)
-                        .sendToTarget();
+                mHandler.obtainMessage(BluetoothChat.MESSAGE_WRITE, -1, -1, buffer).sendToTarget();
             } catch (IOException e) {
                 Log.e(TAG, "Exception during write", e);
             }

@@ -22,10 +22,16 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+<<<<<<< HEAD
 import android.os.Build;
+=======
+>>>>>>> d7fd4ab0d7f75fb04c3540b3c32895d52c65e89e
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -49,7 +55,7 @@ import android.widget.Toast;
  * UI 수정및 필요 없는 부분 개선이 필요한다.
  *
  */
-public class BluetoothChat extends Activity {
+public class BluetoothChat extends AppCompatActivity {
     // Debugging
     private static final String TAG = "BluetoothChat";
     private static final boolean D = true;
@@ -110,16 +116,16 @@ public class BluetoothChat extends Activity {
         //getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.custom_title);
 
         // Set up the custom title
-        mTitle = (TextView) findViewById(R.id.title_left_text);
-        mTitle.setText(R.string.app_name); 
-        mTitle = (TextView) findViewById(R.id.title_right_text);
+        //mTitle = (TextView) findViewById(R.id.title_left_text);
+        //mTitle.setText(R.string.app_name);
+        mTitle = (TextView) findViewById(R.id.title_right_text);  //연결 상태
 
         // Get local Bluetooth adapter
    
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
         // If the adapter is null, then Bluetooth is not supported
-     
+
         if (mBluetoothAdapter == null) {
             Toast.makeText(this, "Bluetooth is not available", Toast.LENGTH_LONG).show();
             finish();
@@ -149,6 +155,9 @@ public class BluetoothChat extends Activity {
 
         // If BT is not on, request that it be enabled.
         // setupChat() will then be called during onActivityResult
+        //블루투스가 꺼져 있다면 "이 기기에서 블루투스를 사요 설정 하려 합니다" 팝업창 표시되며
+        //허용 버튼을 누르면 블루투스가 켜진다
+        //다시 액티비티가 활성화 되면서 onActivityResult 메소드의 setupChat() 부분이 실행된다.
         if (!mBluetoothAdapter.isEnabled()) {
             Intent enableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableIntent, REQUEST_ENABLE_BT);
@@ -163,13 +172,19 @@ public class BluetoothChat extends Activity {
         super.onResume();
         if(D) Log.e(TAG, "+ ON RESUME +");
 
+       // permission();
+
         if (mChatService != null) {
             // Only if the state is STATE_NONE, do we know that we haven't started already
-        	if (mChatService.getState() == BluetoothChatService.STATE_NONE) {
-              // Start the Bluetooth chat services
-        		mChatService.start();
+
+            if (mChatService.getState() == BluetoothChatService.STATE_NONE) {
+                // Start the Bluetooth chat services
+                if (D) Log.d(TAG, "블루투스 서비스 시작");
+                mChatService.start();
             }
         }
+
+
     }
 
     @Override
@@ -190,7 +205,8 @@ public class BluetoothChat extends Activity {
     }
 
     private void setupChat() {
-        Log.d(TAG, "setupChat()");
+
+        Log.d(TAG, "setupChat() UI 초기화");
 
         // Initialize the array adapter for the conversation thread
         mConversationArrayAdapter = new ArrayAdapter<String>(this, R.layout.message);
@@ -199,19 +215,19 @@ public class BluetoothChat extends Activity {
         mConversationView.setAdapter(mConversationArrayAdapter);
 
         // Initialize the compose field with a listener for the return key
-        mOutEditText = (EditText) findViewById(R.id.edit_text_out);
+        //mOutEditText = (EditText) findViewById(R.id.edit_text_out);
         //EditText????? ?????? ??? 
-        mOutEditText.setOnEditorActionListener(mWriteListener);
+       // mOutEditText.setOnEditorActionListener(mWriteListener);
 
         // Initialize the send button with a listener that for click events
-            mSendButton = (Button) findViewById(R.id.button_send);
+          //  mSendButton = (Button) findViewById(R.id.button_send);
           mSendUpButton = (Button) findViewById(R.id.button_up);
         mSendDownButton = (Button) findViewById(R.id.button_down);
         mSendLeftButton = (Button) findViewById(R.id.button_left);
        mSendRightButton = (Button) findViewById(R.id.button_right);
         mSendStopButton = (Button) findViewById(R.id.button_stop);
         
-        mSendButton.setOnClickListener(new OnClickListener() {
+    /*    mSendButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 // Send a message using content of the edit text widget
             	TextView view = (TextView) findViewById(R.id.edit_text_out);
@@ -220,9 +236,9 @@ public class BluetoothChat extends Activity {
             }
             
             
-        });
+        });*/
       
-        //??
+        //전진
         mSendUpButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
@@ -231,7 +247,8 @@ public class BluetoothChat extends Activity {
         	 sendToque(255,255);
         	}
         });
-        
+
+        //후진
         mSendDownButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
@@ -240,7 +257,8 @@ public class BluetoothChat extends Activity {
         	 sendToque(-255, -255);
         	}
         });
-        
+
+        //우회전
         mSendLeftButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
@@ -250,7 +268,7 @@ public class BluetoothChat extends Activity {
         	}
         });
         
-        //????? ??
+        //좌회전
         mSendRightButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
@@ -260,7 +278,7 @@ public class BluetoothChat extends Activity {
         	}
         });
         
-        //??
+        //정지
         mSendStopButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
@@ -313,9 +331,7 @@ public class BluetoothChat extends Activity {
     private void sendToque(int left, int right){
     	
     	if (mChatService.getState() != BluetoothChatService.STATE_CONNECTED) {
-             
         	Toast.makeText(this, R.string.not_connected, Toast.LENGTH_SHORT).show();
-           
         	return;
         }
 
@@ -360,6 +376,7 @@ public class BluetoothChat extends Activity {
     };
 
     // The Handler that gets information back from the BluetoothChatService
+    // 서비스에서 연결 상태에 대한 정보를 표시한다.
     private final Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -367,21 +384,21 @@ public class BluetoothChat extends Activity {
             case MESSAGE_STATE_CHANGE:
                 if(D) Log.i(TAG, "MESSAGE_STATE_CHANGE: " + msg.arg1);
                 switch (msg.arg1) {
-                case BluetoothChatService.STATE_CONNECTED: //???????
+                case BluetoothChatService.STATE_CONNECTED: //블루투스 연결
                     mTitle.setText(R.string.title_connected_to);
                     mTitle.append(mConnectedDeviceName);
                     mConversationArrayAdapter.clear();
                     break;
-                case BluetoothChatService.STATE_CONNECTING:
+                case BluetoothChatService.STATE_CONNECTING:  //연결중
                     mTitle.setText(R.string.title_connecting);
                     break;
                 case BluetoothChatService.STATE_LISTEN:
-                case BluetoothChatService.STATE_NONE:
+                case BluetoothChatService.STATE_NONE:   //연결해제
                     mTitle.setText(R.string.title_not_connected);
                     break;
                 }
                 break;
-            case MESSAGE_WRITE: //????? ?????? ???? 
+            case MESSAGE_WRITE:
                 byte[] writeBuf = (byte[]) msg.obj;
                 // construct a string from the buffer
                 String writeMessage = new String(writeBuf);
@@ -407,30 +424,32 @@ public class BluetoothChat extends Activity {
         }
     };
 
-    //
+    //블루 투스 허용하면 이쪽을 결과가 넘어 온다.
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(D) Log.d(TAG, "onActivityResult " + resultCode);
         switch (requestCode) {
         case REQUEST_CONNECT_DEVICE_SECURE:
             // When DeviceListActivity returns with a device to connect
+            //인증 암호화된 연결
             if (resultCode == Activity.RESULT_OK) {
-                connectDevice(data, true); //??? ?????? 
+                connectDevice(data, true);
             }
             break;
         case REQUEST_CONNECT_DEVICE_INSECURE:
         	
-            // When DeviceListActivity returns with a device to connect
+           //Insecure(인증, 암호화되지 있지 않은) 연결을 지원하기 위한 API가 추가되었다. 기존 메서드에 'Insecure'가 덧붙여진 형태이다.
+            // 페이링에 암호키 확인을 하지 않은 디바이스 등은 이 API를 이용하여 통신해야 한다
             if (resultCode == Activity.RESULT_OK) {
                 connectDevice(data, false);
             }
             break;
-        case REQUEST_ENABLE_BT:
+        case REQUEST_ENABLE_BT:   //블루투스 허용일때
             // When the request to enable Bluetooth returns
             if (resultCode == Activity.RESULT_OK) {
                 // Bluetooth is now enabled, so set up a chat session
-            	Log.d("DEBUG","-------------??????? ??????");
-            	setupChat();
-            } else {
+            	Log.d("DEBUG","블루투스 허용");
+            	setupChat();   //UI초기화
+            } else {      //허용 하지 않을때 메시지
                 // User did not enable Bluetooth or an error occured
                 Log.d(TAG, "BT not enabled");
                 Toast.makeText(this, R.string.bt_not_enabled_leaving, Toast.LENGTH_SHORT).show();
@@ -457,7 +476,7 @@ public class BluetoothChat extends Activity {
         return true;
     }
 
-    //?? ??
+    //옵션메뉴
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent serverIntent = null;
@@ -480,4 +499,117 @@ public class BluetoothChat extends Activity {
         return false;
     }
 
+    /**
+     * 퍼미션
+     */
+
+    private static final int QSC_PERMISSIONS_CAPTURE = 101;
+
+    private void permission()
+    {
+        int currentAPIVersion = android.os.Build.VERSION.SDK_INT;
+        int cameraPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
+        int writePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int readPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        int coarsePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
+        int bluetoothPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH);
+        int bluetoothAdimePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN);
+
+        if (currentAPIVersion >= android.os.Build.VERSION_CODES.M
+                && (cameraPermissionCheck == PackageManager.PERMISSION_DENIED
+                || writePermissionCheck == PackageManager.PERMISSION_DENIED
+                || readPermissionCheck == PackageManager.PERMISSION_DENIED
+                || coarsePermissionCheck == PackageManager.PERMISSION_DENIED
+                || bluetoothPermissionCheck == PackageManager.PERMISSION_DENIED
+                || bluetoothAdimePermissionCheck == PackageManager.PERMISSION_DENIED)) {
+            int per = QSC_PERMISSIONS_CAPTURE;
+            askPermission(per);
+            return;
+        }
+
+        CheckPhoneState();
+    }
+
+    private void CheckPhoneState(){
+
+        if (mChatService != null) {
+            // Only if the state is STATE_NONE, do we know that we haven't started already
+            if (mChatService.getState() == BluetoothChatService.STATE_NONE) {
+                // Start the Bluetooth chat services
+                mChatService.start();
+            }
+        }
+
+    }
+
+    private void askPermission(int permissionCode) {
+        int currentAPIVersion = android.os.Build.VERSION.SDK_INT;
+        int cameraPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA);
+        int writePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
+        int readPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+        int coarsePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION);
+        int bluetoothPermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH);
+        int bluetoothAdimePermissionCheck = ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_ADMIN);
+
+        if (currentAPIVersion >= android.os.Build.VERSION_CODES.M) {
+            int denyNum = 0, index = 0;
+
+            if (cameraPermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+            if (writePermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+            if (readPermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+            if (coarsePermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+            if (bluetoothPermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+            if (bluetoothAdimePermissionCheck == PackageManager.PERMISSION_DENIED)
+                denyNum++;
+
+            String permission[] = new String[denyNum];
+
+            if (cameraPermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.CAMERA;
+                index++;
+            }
+            if (writePermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+                index++;
+            }
+            if (readPermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.READ_EXTERNAL_STORAGE;
+                index++;
+            }
+
+            if (coarsePermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.ACCESS_COARSE_LOCATION;
+                index++;
+            }
+
+            if (bluetoothPermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.ACCESS_COARSE_LOCATION;
+                index++;
+            }
+
+            if (bluetoothAdimePermissionCheck == PackageManager.PERMISSION_DENIED) {
+                permission[index] = Manifest.permission.ACCESS_COARSE_LOCATION;
+                index++;
+            }
+
+
+            if (denyNum > 0)
+                ActivityCompat.requestPermissions(this, permission, permissionCode);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+            switch (requestCode) {
+                case QSC_PERMISSIONS_CAPTURE:
+                    break;
+            }
+        }
+    }
 }

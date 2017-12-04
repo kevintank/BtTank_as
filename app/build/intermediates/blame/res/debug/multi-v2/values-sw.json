@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "F:\\BT_tank_project\\BtTank_as\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw\\values-sw.xml",
             "map": [
                 {
                     "source": "C:\\Users\\kevindesk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.0.0.aar\\dc83bc79146105c8b65e9201a8bec364\\res\\values-sw\\values-sw.xml",
+=======
+            "outputFile": "D:\\work\\BtTank_as\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw\\values-sw.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\kevin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-24.0.0.aar\\fdcc07a0e5af41a5fe94451b6666be5c\\res\\values-sw\\values-sw.xml",
+>>>>>>> d7fd4ab0d7f75fb04c3540b3c32895d52c65e89e
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
