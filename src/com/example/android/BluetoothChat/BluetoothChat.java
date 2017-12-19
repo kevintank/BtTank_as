@@ -103,7 +103,7 @@ public class BluetoothChat extends Activity {
         
         getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.custom_title);
 
-        // Set up the custom title
+        // Set up the custom titless
         mTitle = (TextView) findViewById(R.id.title_left_text);
         mTitle.setText(R.string.app_name); 
         mTitle = (TextView) findViewById(R.id.title_right_text);

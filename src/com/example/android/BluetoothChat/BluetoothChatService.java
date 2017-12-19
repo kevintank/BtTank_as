@@ -538,9 +538,10 @@ public class BluetoothChatService {
         		//if(right != 0) data +=  (char)(right&0xff);  
         		mmOutStream.write(data.getBytes()); //�꾩쭊/�꾩쭊/�뺤� ���곹깭 媛믪쓣 癒쇱� 蹂대궦��
    
-        		//�ш린��遺�꽣 �좏겕 媛믪쓣 蹂대궡 以�떎.
+
         		byte[] size = new byte[2];
 
+        		//비트 연산 하여 정수를 보내다.
         		if(left !=0){
 
         			size[0] = (byte) ((left >> 8) & 0x00ff);  //占쏙옙占쏙옙占쏙옙占쏙옙트
@@ -552,7 +553,7 @@ public class BluetoothChatService {
                     mmOutStream.write(size[1]);
         		}
         		
-        		 //占십깍옙화
+
         		size[0] = 0;
         		size[1] = 0;
         		

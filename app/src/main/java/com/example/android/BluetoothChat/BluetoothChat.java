@@ -23,6 +23,7 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -44,6 +45,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import butterknife.ButterKnife;
+import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * This is the main Activity that displays the current chat session.
@@ -101,6 +106,17 @@ public class BluetoothChat extends AppCompatActivity {
     private BluetoothChatService mChatService = null;
 
 
+    @BindView(R.id.button_ro_left)
+    Button button_ro_left;
+
+    @BindView(R.id.button_ro_right)
+    Button button_ro_right;
+
+    @BindView(R.id.button_ro_stop)
+    Button button_ro_stop;
+
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,6 +125,9 @@ public class BluetoothChat extends AppCompatActivity {
         // Set up the window layout  
        // requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         setContentView(R.layout.main);
+
+        ButterKnife.bind(this);
+
 
         //getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.custom_title);
 
@@ -129,6 +148,31 @@ public class BluetoothChat extends AppCompatActivity {
             return;
         }
     }
+
+
+    @OnClick(R.id.button_ro_left)
+    void TurretLeft() {
+
+         sendTurret(0);
+        Log.d("DEBUG", "Left");
+
+    }
+
+    @OnClick(R.id.button_ro_right)
+    void TurretRight() {
+        sendTurret(180);
+        Log.d("DEBUG", "Right");
+
+    }
+
+    @OnClick(R.id.button_ro_stop)
+    void TurretStop() {
+        sendTurret(90);
+        Log.d("DEBUG", "Stop");
+
+    }
+
+
 
     public void checkBTPermissions(){
 
@@ -182,23 +226,6 @@ public class BluetoothChat extends AppCompatActivity {
         }
 
 
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
-        switch (requestCode) {
-            case REQUEST_COARSE_LOCATION_PERMISSIONS: {
-                if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    continueDoDiscovery();
-                } else {
-                    Toast.makeText(this,
-                            getResources().getString(R.string.permission_failure),
-                            Toast.LENGTH_LONG).show();
-                    cancelOperation();
-                }
-                return;
-            }
-        }
     }
 
     private void setupChat() {
@@ -335,6 +362,19 @@ public class BluetoothChat extends AppCompatActivity {
     	mChatService.toque(left, right);
     	
     }
+
+    private void sendTurret(int status){
+
+        if (mChatService.getState() != BluetoothChatService.STATE_CONNECTED) {
+            Toast.makeText(this, R.string.not_connected, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        mChatService.turret(status);
+
+    }
+
+
     /**
      * Sends a message.
      * @param message  A string of text to send.
@@ -600,13 +640,5 @@ public class BluetoothChat extends AppCompatActivity {
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            switch (requestCode) {
-                case QSC_PERMISSIONS_CAPTURE:
-                    break;
-            }
-        }
-    }
+
 }

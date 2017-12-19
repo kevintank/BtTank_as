@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BtTank_as.iml" filepath="$PROJECT_DIR$/BtTank_as.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/BtTank_as-app.iml" filepath="$PROJECT_DIR$/app/BtTank_as-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

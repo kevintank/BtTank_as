@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-#Sat Nov 18 09:36:54 KST 2017
-base.0=F\:\\BT_tank_project\\BtTank_as\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+#Sat Dec 16 12:35:47 KST 2017
+base.0=F\:\\BT_tank_project\\BtTank_as\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
 renamed.0=classes.dex
-file.0=F\:\\BT_tank_project\\BtTank_as\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11\\classes.dex
-=======
-#Fri Nov 17 16:46:08 KST 2017
-base.0=D\:\\work\\BtTank_as\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
-renamed.0=classes.dex
-file.0=D\:\\work\\BtTank_as\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10\\classes.dex
->>>>>>> d7fd4ab0d7f75fb04c3540b3c32895d52c65e89e

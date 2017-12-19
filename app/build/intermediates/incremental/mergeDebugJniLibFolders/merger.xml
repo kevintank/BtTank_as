@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="F:\BT_tank_project\BtTank_as\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="F:\BT_tank_project\BtTank_as\app\src\debug\jniLibs"/></dataSet></merger>
-=======
-<merger version="3"><dataSet config="main"><source path="D:\work\BtTank_as\app\src\main\jniLibs"/></dataSet><dataSet config="debug"><source path="D:\work\BtTank_as\app\src\debug\jniLibs"/></dataSet></merger>
->>>>>>> d7fd4ab0d7f75fb04c3540b3c32895d52c65e89e

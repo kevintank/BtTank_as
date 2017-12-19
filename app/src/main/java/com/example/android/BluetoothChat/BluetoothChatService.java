@@ -217,6 +217,19 @@ public class BluetoothChatService {
         setState(STATE_NONE);
     }
 
+    public void turret(int status){
+
+        ConnectedThread r;
+        // Synchronize a copy of the ConnectedThread
+        synchronized (this) {
+            if (mState != STATE_CONNECTED) return;
+            r = mConnectedThread;
+        }
+        // Perform the write unsynchronized
+        r.Turret(status);
+
+    }
+
     public void toque(int left, int right){
     	
     	 ConnectedThread r;
@@ -485,6 +498,30 @@ public class BluetoothChatService {
             }
         }
 
+        //포탑회전
+        public void Turret(int value){
+
+            byte[] size = new byte[2];
+
+            String data = "#T";  //명령 구분
+            size[0] = (byte) ((value >> 8) & 0x00ff);
+            size[1] = (byte)(value & 0x00ff);
+
+            Log.d("TANK", "Turret[0]:" + size[0]);
+            Log.d("TANK", "Turret[1]:" + size[1]);
+
+            try {
+                mmOutStream.write(data.getBytes());
+                mmOutStream.write(size[0]);
+                mmOutStream.write(size[1]);
+            } catch (IOException e) {
+                e.printStackTrace();
+                Log.e(TAG, "Exception during write", e);
+            }
+
+        }
+
+
         public void toque(int left, int right){
         	
         	try{
@@ -492,12 +529,12 @@ public class BluetoothChatService {
 
                 //왼쪽 모터
         		if(0 < left){
-        			  data += 'F';
-        		}else if(0 > left){      // 
+        			  data += 'F';  //전진
+        		}else if(0 > left){      // 후진
         			  data += 'B';
         			  left = -left;
         		}else{
-        			data += 'H';
+        			data += 'H';   //정지
         		}
 
         		//오른쪽 모터
@@ -512,7 +549,7 @@ public class BluetoothChatService {
  
         		//if(left !=0) data+=  (char)(left&0xff); 
         		//if(right != 0) data +=  (char)(right&0xff);  
-        		mmOutStream.write(data.getBytes());
+        		mmOutStream.write(data.getBytes()); //바이트 변환
 
         		byte[] size = new byte[2];
 

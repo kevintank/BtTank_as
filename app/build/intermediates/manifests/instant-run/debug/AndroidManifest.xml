@@ -20,30 +20,28 @@
     android:versionName="1.0.0" >
 
     <uses-sdk
-        android:minSdkVersion="19"
+        android:minSdkVersion="23"
         android:targetSdkVersion="24" />
 
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.0" />
 
     <application
         android:debuggable="true"
         android:icon="@drawable/app_icon"
         android:label="@string/app_name"
         android:testOnly="true"
-<<<<<<< HEAD
-        android:theme="@style/AppFullScreenTheme" >
-        <activity
-            android:name="com.example.android.BluetoothChat.BluetoothChat"
-            android:configChanges="orientation|keyboardHidden"
-            android:label="@string/app_name" >
-=======
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.android.BluetoothChat.BluetoothChat"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
->>>>>>> d7fd4ab0d7f75fb04c3540b3c32895d52c65e89e
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

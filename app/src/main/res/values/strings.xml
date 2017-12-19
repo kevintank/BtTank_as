@@ -40,11 +40,19 @@
     <string name="discoverable">Make discoverable</string>
     
     <!-- Tank Button -->
-    <string name="up">Up</string>
-    <string name="down">Down</string>
-    <string name="left">Left</string>
-    <string name="right">Right</string>
-    <string name="stop">Stop</string>
-      
-    
+    <string name="up">전진</string>
+    <string name="up_left">좌 전진</string>
+    <string name="up_right">우 전진</string>
+
+    <string name="left">회전 좌</string>
+    <string name="right">회전 우</string>
+    <string name="stop">정지</string>
+
+    <string name="down_left">후진 좌</string>
+    <string name="down">후진</string>
+    <string name="down_right">후진 우</string>
+
+    <string name="gun_left">포탑 좌회전</string>
+    <string name="gun_right">포탑 우회전</string>
+    <string name="gun_stop">포탑 정지</string>
 </resources>
