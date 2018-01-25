@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "F:\\BT_tank_project\\BtTank_as\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
+            "outputFile": "D:\\BtTank_as\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kevindesk\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.0.aar\\7b640c838587c703b3a3da17e5693d4b\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\kevin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.0.aar\\c362594e95b6c19a291e6b33b9fcbd02\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
