@@ -115,7 +115,18 @@ public class BluetoothChat extends AppCompatActivity {
     @BindView(R.id.button_ro_stop)
     Button button_ro_stop;
 
+    //방향전환
+    @BindView(R.id.button_left_up)
+    Button button_left_up;
 
+    @BindView(R.id.button_right_up)
+    Button button_right_up;
+
+    @BindView(R.id.button_down_left)
+    Button button_down_left;
+
+    @BindView(R.id.button_down_right)
+    Button button_down_right;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -173,6 +184,29 @@ public class BluetoothChat extends AppCompatActivity {
     }
 
 
+    //좌회전
+    @OnClick(R.id.button_left_up)
+    void SteeringLeftUp() {
+        sendToque(70,255);
+    }
+
+    //우회전
+    @OnClick(R.id.button_right_up)
+    void SteeringRightUp() {
+        sendToque(255,70);
+    }
+
+    //후진 좌회전
+    @OnClick(R.id.button_down_left)
+    void SteeringDownLeft() {
+        sendToque(-70,-255);
+    }
+
+    //후전 우회전
+    @OnClick(R.id.button_down_right)
+    void SteeringDownRight() {
+        sendToque(-255,-70);
+    }
 
     public void checkBTPermissions(){
 

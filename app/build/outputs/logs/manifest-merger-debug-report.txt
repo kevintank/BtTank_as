@@ -1,157 +1,160 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
-INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
-INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
-INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\a8bf0a29e25c0857fe0aa702f17c26b2\AndroidManifest.xml:2:1-7:12
-MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\7b640c838587c703b3a3da17e5693d4b\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\09157fdb8bc0c523cedb5dd64f6aa9db\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\c17fa3c28da1c52407cd0df744333e98\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\0a6a0021ac663ad3b6e26ffd6b15bc8b\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\ed42805534672e771c95d227105978e1\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\85f8bd670d2d534207f8acce81d2aba1\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\19d411342a50c51198e6ec4a579caa9d\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\ff2186cb797fe9ce483d8a48bebefbd9\AndroidManifest.xml:17:1-31:12
-MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\47461f14367d0637e67783eeb8a8cf3f\AndroidManifest.xml:17:1-31:12
-INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
-INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
-INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
+ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
+INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
+INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
+INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\c7de9836740f6c0021a060e5092ba507\AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\c362594e95b6c19a291e6b33b9fcbd02\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\63d267f0af18871268fd41337a0fe980\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\7ce24358ff4b5d2c96a09a2db70c2cfb\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\3802af624520248620f2f4ff761e15bb\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\a806bfefca78815572bbca0c091c6cfc\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\21d083ab3e538d8ce5904ed4177d5bc6\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\214682f9c6ef524a9dc3b3b17eac7b58\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\1950d78344a6cd9c284322541f3afe6c\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\757d17dd047a520473910b541c1b3499\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\c99477e4f2c5b0a5f3384bdf8febf3ca\AndroidManifest.xml:17:1-31:12
+INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
+INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
+INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
 	package
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:17:7-50
-		INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
-		INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:17:7-50
+		INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
+		INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
-		INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
+		INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
+		INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
-		INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
+		INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:16:1-40:12
+		INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:16:11-69
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:16:11-69
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:19:5-74
+ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:19:5-74
 	android:name
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:19:22-71
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:19:22-71
 uses-permission#android.permission.BLUETOOTH
-ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:20:5-68
+ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:20:5-68
 	android:name
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:20:22-65
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:20:22-65
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:22:5-79
+ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:22:22-76
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:22:22-76
 application
-ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:24:5-39:19
-MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\7b640c838587c703b3a3da17e5693d4b\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\7b640c838587c703b3a3da17e5693d4b\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\09157fdb8bc0c523cedb5dd64f6aa9db\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\09157fdb8bc0c523cedb5dd64f6aa9db\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\c17fa3c28da1c52407cd0df744333e98\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\c17fa3c28da1c52407cd0df744333e98\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\0a6a0021ac663ad3b6e26ffd6b15bc8b\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\0a6a0021ac663ad3b6e26ffd6b15bc8b\AndroidManifest.xml:26:5-20
-MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\ed42805534672e771c95d227105978e1\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\ed42805534672e771c95d227105978e1\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\85f8bd670d2d534207f8acce81d2aba1\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\85f8bd670d2d534207f8acce81d2aba1\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\19d411342a50c51198e6ec4a579caa9d\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\19d411342a50c51198e6ec4a579caa9d\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\ff2186cb797fe9ce483d8a48bebefbd9\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\ff2186cb797fe9ce483d8a48bebefbd9\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\47461f14367d0637e67783eeb8a8cf3f\AndroidManifest.xml:29:5-20
-MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\47461f14367d0637e67783eeb8a8cf3f\AndroidManifest.xml:29:5-20
+ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:24:5-39:19
+MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\c362594e95b6c19a291e6b33b9fcbd02\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\c362594e95b6c19a291e6b33b9fcbd02\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\7ce24358ff4b5d2c96a09a2db70c2cfb\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\7ce24358ff4b5d2c96a09a2db70c2cfb\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\3802af624520248620f2f4ff761e15bb\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\3802af624520248620f2f4ff761e15bb\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\a806bfefca78815572bbca0c091c6cfc\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\a806bfefca78815572bbca0c091c6cfc\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\21d083ab3e538d8ce5904ed4177d5bc6\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\21d083ab3e538d8ce5904ed4177d5bc6\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\214682f9c6ef524a9dc3b3b17eac7b58\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\214682f9c6ef524a9dc3b3b17eac7b58\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\1950d78344a6cd9c284322541f3afe6c\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\1950d78344a6cd9c284322541f3afe6c\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\757d17dd047a520473910b541c1b3499\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\757d17dd047a520473910b541c1b3499\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\c99477e4f2c5b0a5f3384bdf8febf3ca\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\c99477e4f2c5b0a5f3384bdf8febf3ca\AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:24:18-50
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:24:18-50
 	android:icon
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:25:18-51
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:25:18-51
 	android:theme
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:26:9-40
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:26:9-40
 activity#com.example.android.BluetoothChat.BluetoothChat
-ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:27:9-34:20
+ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:27:9-34:20
 	android:screenOrientation
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:29:19-55
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:29:19-55
 	android:label
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:28:19-51
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:28:19-51
 	android:name
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:27:19-48
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:27:19-48
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:30:13-33:29
+ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:30:13-33:29
 action#android.intent.action.MAIN
-ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:32:17-77
+ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:32:27-74
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:32:27-74
 activity#com.example.android.BluetoothChat.DeviceListActivity
-ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:35:9-38:72
+ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:35:9-38:72
 	android:label
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:36:19-56
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:36:19-56
 	android:configChanges
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:38:19-69
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:38:19-69
 	android:theme
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:37:19-83
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:37:19-83
 	android:name
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml:35:19-53
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml:35:19-53
 uses-sdk
-INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
-INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\a8bf0a29e25c0857fe0aa702f17c26b2\AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\a8bf0a29e25c0857fe0aa702f17c26b2\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\7b640c838587c703b3a3da17e5693d4b\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\7b640c838587c703b3a3da17e5693d4b\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\09157fdb8bc0c523cedb5dd64f6aa9db\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\09157fdb8bc0c523cedb5dd64f6aa9db\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\c17fa3c28da1c52407cd0df744333e98\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\c17fa3c28da1c52407cd0df744333e98\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\0a6a0021ac663ad3b6e26ffd6b15bc8b\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\0a6a0021ac663ad3b6e26ffd6b15bc8b\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\ed42805534672e771c95d227105978e1\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\ed42805534672e771c95d227105978e1\AndroidManifest.xml:21:5-23:60
-MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\85f8bd670d2d534207f8acce81d2aba1\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\85f8bd670d2d534207f8acce81d2aba1\AndroidManifest.xml:21:5-23:63
-MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\19d411342a50c51198e6ec4a579caa9d\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\19d411342a50c51198e6ec4a579caa9d\AndroidManifest.xml:21:5-23:61
-MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\ff2186cb797fe9ce483d8a48bebefbd9\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\ff2186cb797fe9ce483d8a48bebefbd9\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\47461f14367d0637e67783eeb8a8cf3f\AndroidManifest.xml:21:5-23:58
-MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\47461f14367d0637e67783eeb8a8cf3f\AndroidManifest.xml:21:5-23:58
-INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
-INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
+INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
+INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\c7de9836740f6c0021a060e5092ba507\AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.8.1] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\butterknife-8.8.1.aar\c7de9836740f6c0021a060e5092ba507\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\c362594e95b6c19a291e6b33b9fcbd02\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\c362594e95b6c19a291e6b33b9fcbd02\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\63d267f0af18871268fd41337a0fe980\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\multidex-1.0.2.aar\63d267f0af18871268fd41337a0fe980\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\7ce24358ff4b5d2c96a09a2db70c2cfb\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\7ce24358ff4b5d2c96a09a2db70c2cfb\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\3802af624520248620f2f4ff761e15bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\3802af624520248620f2f4ff761e15bb\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\a806bfefca78815572bbca0c091c6cfc\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\a806bfefca78815572bbca0c091c6cfc\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\21d083ab3e538d8ce5904ed4177d5bc6\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\21d083ab3e538d8ce5904ed4177d5bc6\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\214682f9c6ef524a9dc3b3b17eac7b58\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\214682f9c6ef524a9dc3b3b17eac7b58\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\1950d78344a6cd9c284322541f3afe6c\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\1950d78344a6cd9c284322541f3afe6c\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\757d17dd047a520473910b541c1b3499\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\757d17dd047a520473910b541c1b3499\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\c99477e4f2c5b0a5f3384bdf8febf3ca\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\c99477e4f2c5b0a5f3384bdf8febf3ca\AndroidManifest.xml:21:5-23:58
+INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
+INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\7b640c838587c703b3a3da17e5693d4b\AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\c362594e95b6c19a291e6b33b9fcbd02\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
-		INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
-		INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
+		INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml
+		INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
-		ADDED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
-		INJECTED from F:\BT_tank_project\BtTank_as\app\src\main\AndroidManifest.xml
+		INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
+		ADDED from D:\BtTank_as\app\src\main\AndroidManifest.xml
+		INJECTED from D:\BtTank_as\app\src\main\AndroidManifest.xml
 meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\7b640c838587c703b3a3da17e5693d4b\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\09157fdb8bc0c523cedb5dd64f6aa9db\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\09157fdb8bc0c523cedb5dd64f6aa9db\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\c17fa3c28da1c52407cd0df744333e98\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\c17fa3c28da1c52407cd0df744333e98\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\0a6a0021ac663ad3b6e26ffd6b15bc8b\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\0a6a0021ac663ad3b6e26ffd6b15bc8b\AndroidManifest.xml:22:5-24:34
-MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\ed42805534672e771c95d227105978e1\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\ed42805534672e771c95d227105978e1\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\85f8bd670d2d534207f8acce81d2aba1\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\85f8bd670d2d534207f8acce81d2aba1\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\19d411342a50c51198e6ec4a579caa9d\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\19d411342a50c51198e6ec4a579caa9d\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\ff2186cb797fe9ce483d8a48bebefbd9\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\ff2186cb797fe9ce483d8a48bebefbd9\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\47461f14367d0637e67783eeb8a8cf3f\AndroidManifest.xml:25:5-27:34
-MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\47461f14367d0637e67783eeb8a8cf3f\AndroidManifest.xml:25:5-27:34
+ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\c362594e95b6c19a291e6b33b9fcbd02\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\7ce24358ff4b5d2c96a09a2db70c2cfb\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.0.aar\7ce24358ff4b5d2c96a09a2db70c2cfb\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\3802af624520248620f2f4ff761e15bb\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.0.aar\3802af624520248620f2f4ff761e15bb\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\a806bfefca78815572bbca0c091c6cfc\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.0.aar\a806bfefca78815572bbca0c091c6cfc\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\21d083ab3e538d8ce5904ed4177d5bc6\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.0.aar\21d083ab3e538d8ce5904ed4177d5bc6\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\214682f9c6ef524a9dc3b3b17eac7b58\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.0.aar\214682f9c6ef524a9dc3b3b17eac7b58\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\1950d78344a6cd9c284322541f3afe6c\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.0.aar\1950d78344a6cd9c284322541f3afe6c\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\757d17dd047a520473910b541c1b3499\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.0.aar\757d17dd047a520473910b541c1b3499\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\c99477e4f2c5b0a5f3384bdf8febf3ca\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.0.aar\c99477e4f2c5b0a5f3384bdf8febf3ca\AndroidManifest.xml:25:5-27:34
 	android:value
-		ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\7b640c838587c703b3a3da17e5693d4b\AndroidManifest.xml:27:9-31
+		ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\c362594e95b6c19a291e6b33b9fcbd02\AndroidManifest.xml:27:9-31
 	android:name
-		ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevindesk\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\7b640c838587c703b3a3da17e5693d4b\AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:appcompat-v7:25.3.0] C:\Users\kevin\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.0.aar\c362594e95b6c19a291e6b33b9fcbd02\AndroidManifest.xml:26:9-47

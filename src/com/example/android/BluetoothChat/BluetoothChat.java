@@ -41,7 +41,7 @@ import android.widget.Toast;
 
 /**
  * This is the main Activity that displays the current chat session.
- * 한글이 깨짐 
+ * 한글이 깨짐 수정
  */
 public class BluetoothChat extends Activity {
     // Debugging

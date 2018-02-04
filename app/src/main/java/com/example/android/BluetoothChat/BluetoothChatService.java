@@ -554,7 +554,7 @@ public class BluetoothChatService {
         		byte[] size = new byte[2];
 
         		//왼쪽 전달
-        		if(left !=0){
+        		if(left!=0){
 
         			size[0] = (byte) ((left >> 8) & 0x00ff);
         	        size[1] = (byte)(left & 0x00ff);
@@ -570,7 +570,7 @@ public class BluetoothChatService {
         		size[1] = 0;
 
         		//오른쪽 전달
-        		if(right != 0){
+        		if(right!= 0){
         			 
         			size[0] = (byte) ((right >> 8) & 0x00ff);
         	        size[1] = (byte)(right & 0x00ff);
