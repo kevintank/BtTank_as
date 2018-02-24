@@ -1,3 +1,3 @@
-# Referenced at D:\BtTank_as\app\build\intermediates\manifests\full\debug\AndroidManifest.xml:35
+# Referenced at F:\BT_tank_project\BtTank_as\app\build\intermediates\manifests\full\debug\AndroidManifest.xml:35
 -keep class android.support.multidex.MultiDexApplication { <init>(...); }
 
