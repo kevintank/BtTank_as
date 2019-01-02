@@ -1,10 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\BtTank_as\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
+            "outputFile": "D:\\android project\\BtTank_as\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\kevin\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-25.3.0.aar\\c362594e95b6c19a291e6b33b9fcbd02\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\SY\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-26.0.1.aar\\10485436dc598f4890e757b30882b2de\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "121",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\SY\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.0.1.aar\\f2892996afed820c380ca11cd2d80501\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

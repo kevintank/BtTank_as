@@ -161,6 +161,39 @@
             android:text="@string/gun_stop" />
     </RelativeLayout>
 
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#000000"
+            android:text="Barrel"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/button_barrel_up"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/barrel_up" />
+        <Button
+            android:id="@+id/button_barrel_down"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:text="@string/barrel_down" />
+    </LinearLayout>
+
     <ListView android:id="@+id/in"
         android:layout_width="match_parent"
         android:layout_height="0dp"

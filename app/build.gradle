@@ -1,14 +1,13 @@
 apply plugin: 'com.android.application'
 
-
 android {
-    compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 26
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.example.android.BluetoothChat"
         multiDexEnabled true
-        minSdkVersion 19
-        targetSdkVersion 23
+        minSdkVersion 22
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0.0"
 
@@ -27,12 +26,15 @@ android {
 
     productFlavors {
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.3.0'
+    implementation 'com.android.support:appcompat-v7:26.0.1'
     api 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-
-    compile('com.android.support:multidex:1.0.1')
+    implementation 'com.android.support:multidex:1.0.1'
 }

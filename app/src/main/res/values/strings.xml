@@ -55,4 +55,8 @@
     <string name="gun_left">포탑 좌회전</string>
     <string name="gun_right">포탑 우회전</string>
     <string name="gun_stop">포탑 정지</string>
+
+    <string name="barrel_up">포 상</string>
+    <string name="barrel_down">포 하</string>
+
 </resources>

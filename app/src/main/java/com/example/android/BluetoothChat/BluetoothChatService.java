@@ -230,6 +230,20 @@ public class BluetoothChatService {
 
     }
 
+    public void barrel(int direction){
+
+        ConnectedThread r;
+        // Synchronize a copy of the ConnectedThread
+        synchronized (this) {
+            if (mState != STATE_CONNECTED) return;
+            r = mConnectedThread;
+        }
+        // Perform the write unsynchronized
+        r.Barrel(direction);
+
+    }
+
+
     public void toque(int left, int right){
     	
     	 ConnectedThread r;
@@ -521,6 +535,24 @@ public class BluetoothChatService {
 
         }
 
+        //포신 상하
+        public void Barrel(int drirection){
+
+            byte[] size = new byte[2];
+            String data = "#P";  //명령 구분
+            size[0] = (byte) ((drirection >> 8) & 0x00ff);
+            size[1] = (byte)(drirection & 0x00ff);
+            Log.d("TANK", "Barrel[0]:" + size[0]);
+            Log.d("TANK", "Barrel[1]:" + size[1]);
+            try {
+                mmOutStream.write(data.getBytes());
+                mmOutStream.write(size[0]);
+                mmOutStream.write(size[1]);
+            } catch (IOException e) {
+                e.printStackTrace();
+                Log.e(TAG, "Exception during write", e);
+            }
+        }
 
         public void toque(int left, int right){
         	

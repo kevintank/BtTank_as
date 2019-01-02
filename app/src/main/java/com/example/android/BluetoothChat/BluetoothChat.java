@@ -17,6 +17,7 @@
 package com.example.android.BluetoothChat;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -104,7 +105,8 @@ public class BluetoothChat extends AppCompatActivity {
     private BluetoothAdapter mBluetoothAdapter = null;
     // Member object for the chat services
     private BluetoothChatService mChatService = null;
-
+    private static final int UP_BARREL = 101;
+    private static final int DOWN_BARREL = 102;
 
     @BindView(R.id.button_ro_left)
     Button button_ro_left;
@@ -145,8 +147,15 @@ public class BluetoothChat extends AppCompatActivity {
         // Set up the custom title
         //mTitle = (TextView) findViewById(R.id.title_left_text);
         //mTitle.setText(R.string.app_name);
-        mTitle = (TextView) findViewById(R.id.title_right_text);  //연결 상태
+        mTitle =  findViewById(R.id.title_right_text);  //연결 상태
 
+        findViewById(R.id.button_barrel_up).setOnClickListener(v -> {
+            sendBarrel(UP_BARREL);
+        });
+
+        findViewById(R.id.button_barrel_down).setOnClickListener(v -> {
+            sendBarrel(DOWN_BARREL);
+        });
         // Get local Bluetooth adapter
    
         mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
@@ -184,30 +193,31 @@ public class BluetoothChat extends AppCompatActivity {
     }
 
 
-    //좌회전
+    //완만한 좌회전
     @OnClick(R.id.button_left_up)
     void SteeringLeftUp() {
-        sendToque(70,255);
+        sendToque(255,100);
     }
 
-    //우회전
+    //완만한 우회전
     @OnClick(R.id.button_right_up)
     void SteeringRightUp() {
-        sendToque(255,70);
+        sendToque(255,127);
     }
 
     //후진 좌회전
     @OnClick(R.id.button_down_left)
     void SteeringDownLeft() {
-        sendToque(-70,-255);
+        sendToque(-127,-255);
     }
 
     //후전 우회전
     @OnClick(R.id.button_down_right)
     void SteeringDownRight() {
-        sendToque(-255,-70);
+        sendToque(-255,-127);
     }
 
+    @TargetApi(23)
     public void checkBTPermissions(){
 
         if(Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP){
@@ -403,9 +413,16 @@ public class BluetoothChat extends AppCompatActivity {
             Toast.makeText(this, R.string.not_connected, Toast.LENGTH_SHORT).show();
             return;
         }
-
         mChatService.turret(status);
+    }
 
+    private void sendBarrel(int direction){
+
+        if (mChatService.getState() != BluetoothChatService.STATE_CONNECTED) {
+            Toast.makeText(this, R.string.not_connected, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        mChatService.barrel(direction);
     }
 
 
