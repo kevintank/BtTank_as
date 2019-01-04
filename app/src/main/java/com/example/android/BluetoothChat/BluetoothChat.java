@@ -196,7 +196,7 @@ public class BluetoothChat extends AppCompatActivity {
     //완만한 좌회전
     @OnClick(R.id.button_left_up)
     void SteeringLeftUp() {
-        sendToque(255,100);
+        sendToque(127,255);
     }
 
     //완만한 우회전
