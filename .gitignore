@@ -1,0 +1,15 @@
+*.class
+*.json
+*.dex
+*.jar
+*.apk
+*.xml
+*.flat
+*.ap_
+*.crc
+*.txt
+*.properties
+*.java
+*.iml
+*.bin
+*.lock

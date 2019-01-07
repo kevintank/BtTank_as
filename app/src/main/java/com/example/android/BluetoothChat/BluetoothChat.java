@@ -196,25 +196,25 @@ public class BluetoothChat extends AppCompatActivity {
     //완만한 좌회전
     @OnClick(R.id.button_left_up)
     void SteeringLeftUp() {
-        sendToque(127,255);
+        sendToque(100,255);
     }
 
     //완만한 우회전
     @OnClick(R.id.button_right_up)
     void SteeringRightUp() {
-        sendToque(255,127);
+        sendToque(255,100);
     }
 
     //후진 좌회전
     @OnClick(R.id.button_down_left)
     void SteeringDownLeft() {
-        sendToque(-127,-255);
+        sendToque(-100,-255);
     }
 
     //후전 우회전
     @OnClick(R.id.button_down_right)
     void SteeringDownRight() {
-        sendToque(-255,-127);
+        sendToque(-255,-100);
     }
 
     @TargetApi(23)
@@ -326,7 +326,7 @@ public class BluetoothChat extends AppCompatActivity {
         	}
         });
 
-        //우회전
+        //제자리 우회전
         mSendLeftButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
@@ -336,7 +336,7 @@ public class BluetoothChat extends AppCompatActivity {
         	}
         });
         
-        //좌회전
+        //제자리 좌회전
         mSendRightButton.setOnClickListener(new OnClickListener(){
         	@Override
         	public void onClick(View v) {
