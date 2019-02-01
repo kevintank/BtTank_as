@@ -4,7 +4,7 @@ package com.example.android.BluetoothChat;
 import android.support.annotation.CallSuper;
 import android.support.annotation.UiThread;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import butterknife.Unbinder;
 import butterknife.internal.DebouncingOnClickListener;
 import butterknife.internal.Utils;
@@ -39,7 +39,7 @@ public class BluetoothChat_ViewBinding implements Unbinder {
 
     View view;
     view = Utils.findRequiredView(source, R.id.button_ro_left, "field 'button_ro_left' and method 'TurretLeft'");
-    target.button_ro_left = Utils.castView(view, R.id.button_ro_left, "field 'button_ro_left'", Button.class);
+    target.button_ro_left = Utils.castView(view, R.id.button_ro_left, "field 'button_ro_left'", ImageButton.class);
     view2131165227 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -48,7 +48,7 @@ public class BluetoothChat_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.button_ro_right, "field 'button_ro_right' and method 'TurretRight'");
-    target.button_ro_right = Utils.castView(view, R.id.button_ro_right, "field 'button_ro_right'", Button.class);
+    target.button_ro_right = Utils.castView(view, R.id.button_ro_right, "field 'button_ro_right'", ImageButton.class);
     view2131165228 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -57,7 +57,7 @@ public class BluetoothChat_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.button_ro_stop, "field 'button_ro_stop' and method 'TurretStop'");
-    target.button_ro_stop = Utils.castView(view, R.id.button_ro_stop, "field 'button_ro_stop'", Button.class);
+    target.button_ro_stop = Utils.castView(view, R.id.button_ro_stop, "field 'button_ro_stop'", ImageButton.class);
     view2131165229 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -66,7 +66,7 @@ public class BluetoothChat_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.button_left_up, "field 'button_left_up' and method 'SteeringLeftUp'");
-    target.button_left_up = Utils.castView(view, R.id.button_left_up, "field 'button_left_up'", Button.class);
+    target.button_left_up = Utils.castView(view, R.id.button_left_up, "field 'button_left_up'", ImageButton.class);
     view2131165224 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -75,7 +75,7 @@ public class BluetoothChat_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.button_right_up, "field 'button_right_up' and method 'SteeringRightUp'");
-    target.button_right_up = Utils.castView(view, R.id.button_right_up, "field 'button_right_up'", Button.class);
+    target.button_right_up = Utils.castView(view, R.id.button_right_up, "field 'button_right_up'", ImageButton.class);
     view2131165226 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -84,7 +84,7 @@ public class BluetoothChat_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.button_down_left, "field 'button_down_left' and method 'SteeringDownLeft'");
-    target.button_down_left = Utils.castView(view, R.id.button_down_left, "field 'button_down_left'", Button.class);
+    target.button_down_left = Utils.castView(view, R.id.button_down_left, "field 'button_down_left'", ImageButton.class);
     view2131165221 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override
@@ -93,7 +93,7 @@ public class BluetoothChat_ViewBinding implements Unbinder {
       }
     });
     view = Utils.findRequiredView(source, R.id.button_down_right, "field 'button_down_right' and method 'SteeringDownRight'");
-    target.button_down_right = Utils.castView(view, R.id.button_down_right, "field 'button_down_right'", Button.class);
+    target.button_down_right = Utils.castView(view, R.id.button_down_right, "field 'button_down_right'", ImageButton.class);
     view2131165222 = view;
     view.setOnClickListener(new DebouncingOnClickListener() {
       @Override

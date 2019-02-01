@@ -1,223 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2009 The Android Open Source Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-          http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg1">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical|right">
-      <!--  <TextView android:id="@+id/title_left_text"
-            android:layout_alignParentLeft="true"
-            android:ellipsize="end"
-            android:singleLine="true"
-            style="?android:attr/windowTitleStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Title"
-            android:layout_weight="1"
-            />-->
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal">
+        <!--  <TextView android:id="@+id/title_left_text"
+              android:layout_alignParentLeft="true"
+              android:ellipsize="end"
+              android:singleLine="true"
+              style="?android:attr/windowTitleStyle"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:text="Title"
+              android:layout_weight="1"
+              />-->
         <TextView
             android:id="@+id/title_right_text"
-            android:ellipsize="end"
-            android:singleLine="true"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:textColor="#000000"
+            android:ellipsize="end"
+            android:singleLine="true"
             android:text="Connect status"
-            />
+            android:textColor="#000000" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_alignParentRight="true"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textColor="#000000"
-            android:text="Steering Control"
-            />
-    </LinearLayout>
-    <RelativeLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
-
-        <Button android:id="@+id/button_left_up"
-            android:layout_width="wrap_content"
-            android:layout_height="65dip"
-
-            android:text="@string/up_left"/>
-
-        <Button android:id="@+id/button_up"
-            android:layout_width="wrap_content"
-            android:layout_height="65dip"
-            android:layout_centerHorizontal="true"
-            android:text="@string/up"/>
-
-        <Button android:id="@+id/button_right_up"
-            android:layout_width="wrap_content"
-            android:layout_height="65dip"
-            android:layout_alignParentRight="true"
-            android:text="@string/up_right"/>
-
-        <Button android:id="@+id/button_left"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:layout_below="@+id/button_up"
-            android:text="@string/left"/>
-        <Button android:id="@+id/button_right"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:layout_below="@+id/button_up"
-            android:layout_alignParentRight="true"
-            android:text="@string/right"/>
-        <Button android:id="@+id/button_stop"
-            android:layout_width="wrap_content"
-            android:layout_below="@+id/button_up"
-            android:layout_height="65dp"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            android:text="@string/stop"/>
-
-
-        <Button android:id="@+id/button_down_left"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:layout_below="@+id/button_left"
-            android:text="@string/down_left"/>
-
-        <Button android:id="@+id/button_down"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:layout_below="@+id/button_left"
-            android:layout_centerHorizontal="true"
-            android:text="@string/down"/>
-
-        <Button android:id="@+id/button_down_right"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:layout_below="@+id/button_right"
-            android:layout_alignParentRight="true"
-            android:text="@string/down_right"/>
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_alignParentRight="true"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textColor="#000000"
-            android:text="Turret Rotate"
-            />
-    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:orientation="horizontal">
-        <Button
-            android:id="@+id/button_ro_left"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
+
+        <ImageButton
+            android:id="@+id/button_left_up"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@+id/button_stop"
+            android:background="@drawable/ic_left_up" />
+
+        <ImageButton
+            android:id="@+id/button_up"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
-            android:text="@string/gun_left" />
-        <Button
-            android:id="@+id/button_ro_right"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:text="@string/gun_right" />
+            android:background="@drawable/arrow_upward_24px" />
 
-        <Button
-            android:layout_alignParentRight="true"
-            android:id="@+id/button_ro_stop"
+        <ImageButton
+            android:id="@+id/button_right_up"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/button_stop"
+            android:background="@drawable/ic_right_up" />
+
+        <ImageButton
+            android:id="@+id/button_left"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignTop="@+id/button_stop"
+            android:layout_marginTop="40dp"
+            android:layout_toLeftOf="@+id/button_stop"
+            android:background="@drawable/ic_arrow_left_24px" />
+
+        <ImageButton
+            android:id="@+id/button_right"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignTop="@+id/button_stop"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@+id/button_stop"
+            android:background="@drawable/ic_arrow_right_24px" />
+
+        <ImageButton
+            android:id="@+id/button_stop"
             android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:text="@string/gun_stop" />
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_up"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/img_stop" />
+
+
+        <ImageButton
+            android:id="@+id/button_down_left"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_alignRight="@+id/button_left"
+            android:layout_below="@+id/button_left"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_down_left" />
+
+        <ImageButton
+            android:id="@+id/button_down"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/button_stop"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/arrow_downward_24px"
+            android:text="@string/down" />
+
+        <ImageButton
+            android:id="@+id/button_down_right"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/button_right"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/button_stop"
+            android:background="@drawable/ic_right_down" />
     </RelativeLayout>
-
-
-   <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_alignParentRight="true"
-            android:ellipsize="end"
-            android:singleLine="true"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textColor="#000000"
-            android:text="Barrel"
-            />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/button_barrel_up"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:layout_centerHorizontal="true"
-            android:text="@string/barrel_up" />
-        <Button
-            android:id="@+id/button_barrel_down"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:text="@string/barrel_down" />
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/button_ro_left"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+            android:background="@drawable/ic_turret_left" />
+
+        <ImageButton
+
+            android:id="@+id/button_ro_stop"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_turret_stop" />
+
+        <ImageButton
+            android:id="@+id/button_ro_right"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_turret_right" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/button_barrel_up"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_barrel_up" />
+
+            <ImageButton
+                android:id="@+id/button_barrel_down"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_barrel_down" />
+
+        </LinearLayout>
     </LinearLayout>
 
-    <ListView android:id="@+id/in"
+
+    <ListView
+        android:id="@+id/in"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:stackFromBottom="true"
-        android:transcriptMode="alwaysScroll"
         android:layout_weight="1"
-    />
-<!--    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
-        <EditText 
-            android:id="@+id/edit_text_out"
-            android:layout_width="0dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll" />
+    <!--    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_gravity="bottom"
-        />
-        <Button android:id="@+id/button_send"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/send"
-        />
-    </LinearLayout>-->
+            >
+            <EditText
+                android:id="@+id/edit_text_out"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+            />
+            <Button android:id="@+id/button_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send"
+            />
+        </LinearLayout>-->
 
 </LinearLayout>

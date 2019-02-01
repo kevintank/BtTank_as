@@ -43,6 +43,7 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -83,14 +84,14 @@ public class BluetoothChat extends AppCompatActivity {
     private TextView mTitle;
     private ListView mConversationView;
     private EditText mOutEditText;
-    private Button mSendButton;
+    private ImageButton mSendButton;
 
     // Tank Button
-    private Button mSendUpButton;
-    private Button mSendDownButton;
-    private Button mSendLeftButton;
-    private Button mSendRightButton;
-    private Button mSendStopButton;
+    private ImageButton mSendUpButton;
+    private ImageButton mSendDownButton;
+    private ImageButton mSendLeftButton;
+    private ImageButton mSendRightButton;
+    private ImageButton mSendStopButton;
     
     // Name of the connected device
     private String mConnectedDeviceName = null;
@@ -109,26 +110,26 @@ public class BluetoothChat extends AppCompatActivity {
     private static final int DOWN_BARREL = 102;
 
     @BindView(R.id.button_ro_left)
-    Button button_ro_left;
+    ImageButton button_ro_left;
 
     @BindView(R.id.button_ro_right)
-    Button button_ro_right;
+    ImageButton button_ro_right;
 
     @BindView(R.id.button_ro_stop)
-    Button button_ro_stop;
+    ImageButton button_ro_stop;
 
     //방향전환
     @BindView(R.id.button_left_up)
-    Button button_left_up;
+    ImageButton button_left_up;
 
     @BindView(R.id.button_right_up)
-    Button button_right_up;
+    ImageButton button_right_up;
 
     @BindView(R.id.button_down_left)
-    Button button_down_left;
+    ImageButton button_down_left;
 
     @BindView(R.id.button_down_right)
-    Button button_down_right;
+    ImageButton button_down_right;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -289,11 +290,11 @@ public class BluetoothChat extends AppCompatActivity {
 
         // Initialize the send button with a listener that for click events
           //  mSendButton = (Button) findViewById(R.id.button_send);
-          mSendUpButton = (Button) findViewById(R.id.button_up);
-        mSendDownButton = (Button) findViewById(R.id.button_down);
-        mSendLeftButton = (Button) findViewById(R.id.button_left);
-       mSendRightButton = (Button) findViewById(R.id.button_right);
-        mSendStopButton = (Button) findViewById(R.id.button_stop);
+          mSendUpButton =findViewById(R.id.button_up);
+        mSendDownButton = findViewById(R.id.button_down);
+        mSendLeftButton =  findViewById(R.id.button_left);
+       mSendRightButton =  findViewById(R.id.button_right);
+        mSendStopButton =  findViewById(R.id.button_stop);
         
     /*    mSendButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
@@ -317,33 +318,24 @@ public class BluetoothChat extends AppCompatActivity {
         });
 
         //후진
-        mSendDownButton.setOnClickListener(new OnClickListener(){
-        	@Override
-        	public void onClick(View v) {
-        		// TODO Auto-generated method stub
-        	  
-        	 sendToque(-255, -255);
-        	}
+        mSendDownButton.setOnClickListener(v -> {
+            // TODO Auto-generated method stub
+
+         sendToque(-255, -255);
         });
 
         //제자리 우회전
-        mSendLeftButton.setOnClickListener(new OnClickListener(){
-        	@Override
-        	public void onClick(View v) {
-        		// TODO Auto-generated method stub
-         
-        	 sendToque(-255,255);
-        	}
+        mSendLeftButton.setOnClickListener(v -> {
+            // TODO Auto-generated method stub
+
+         sendToque(-255,255);
         });
         
-        //제자리 좌회전
-        mSendRightButton.setOnClickListener(new OnClickListener(){
-        	@Override
-        	public void onClick(View v) {
-        		// TODO Auto-generated method stub
-        	 
-        	 sendToque(255, -255);
-        	}
+        //제자리 좌회전 버튼
+        mSendRightButton.setOnClickListener(v -> {
+            // TODO Auto-generated method stub
+
+         sendToque(255, -255);
         });
         
         //정지
